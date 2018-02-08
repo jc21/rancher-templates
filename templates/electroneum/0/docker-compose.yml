@@ -12,16 +12,7 @@ services:
       - RPC_BIND_PORT=${rpc_bind_port}
       - RPC_BIND_IP=0.0.0.0
       - DAEMON_EXTRA_ARGS=--confirm-external-bind ${daemon_extra_args}
-    labels:
-      io.rancher.sidekicks: electroneum-data
-      io.rancher.container.hostname_override: container_name
-
-  electroneum-data:
-    image: jc21/electroneumd:latest
-    entrypoint:
-      - /bin/true
     volumes:
       - /root/.electroneum
     labels:
-      io.rancher.container.start_once: 'true'
       io.rancher.container.hostname_override: container_name
