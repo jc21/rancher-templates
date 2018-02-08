@@ -7,6 +7,8 @@ Visit the [Rancher Site](http://rancher.com) if you're wondering what's going on
 ## Templates in this Catalog
 
 - [Electroneum](https://github.com/jc21/docker-electroneumd)
+- [Intense Coin](https://github.com/jc21/docker-intensecoind)
+- [EthOS Config Manager](https://github.com/jc21/ethos-config-manager)
 
 
 ## How to add this Catalog
