@@ -5,14 +5,11 @@ services:
     volumes_from:
       - electroneum-data
     ports:
-      - "${P2P_BIND_PORT}:${P2P_BIND_PORT}"
-      - "${RPC_BIND_PORT}:${RPC_BIND_PORT}"
+      - ${P2P_BIND_PORT}:26967
+      - ${RPC_BIND_PORT}:26968
     environment:
-      - LOG_LEVEL=${LOG_LEVEL}
-      - P2P_BIND_PORT=${P2P_BIND_PORT}
-      - RPC_BIND_PORT=${RPC_BIND_PORT}
       - RPC_BIND_IP=0.0.0.0
-      - DAEMON_EXTRA_ARGS=--confirm-external-bind ${DAEMON_EXTRA_ARGS}
+      - DAEMON_EXTRA_ARGS=--confirm-external-bind ${EXTRA_ARGS}
     labels:
       io.rancher.sidekicks: electroneum-data
       io.rancher.container.hostname_override: container_name

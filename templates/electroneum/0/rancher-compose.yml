@@ -16,13 +16,7 @@ catalog:
       default: 26968
       required: true
       type: int
-    - variable: LOG_LEVEL
-      label: Log Level
-      description: The daemon log level
-      default: 0
-      required: true
-      type: int
-    - variable: DAEMON_EXTRA_ARGS
+    - variable: EXTRA_ARGS
       label: Daemon Arguments
       description: Extra Arguments for Daemon. See project page for info.
       default:
