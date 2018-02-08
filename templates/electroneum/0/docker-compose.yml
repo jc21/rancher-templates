@@ -2,8 +2,6 @@ version: '2'
 services:
   electroneum:
     image: jc21/electroneumd:latest
-    volumes_from:
-      - electroneum-data
     ports:
       - ${p2p_bind_port}:${p2p_bind_port}
       - ${rpc_bind_port}:${rpc_bind_port}
