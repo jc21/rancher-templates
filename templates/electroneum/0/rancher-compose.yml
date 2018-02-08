@@ -4,19 +4,19 @@ catalog:
   version: 0.0.1
   description: Electroneum Node
   questions:
-    - variable: P2P_BIND_PORT
+    - variable: p2p_bind_port
       label: P2P Port
       description: The Port to be used for P2P connections
       default: 26967
       required: true
       type: int
-    - variable: P2P_BIND_PORT
+    - variable: rpc_bind_port
       label: RPC Port
       description: The Port to be used for RPC connections
       default: 26968
       required: true
       type: int
-    - variable: EXTRA_ARGS
+    - variable: daemon_extra_args
       label: Daemon Arguments
       description: Extra Arguments for Daemon. See project page for info.
       default:
