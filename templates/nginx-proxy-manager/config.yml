@@ -1,0 +1,8 @@
+name: Nginx Proxy Manager
+description: |
+  UI to create home web based forwarding with free SSL
+version: 1.0.1
+category: proxy
+maintainer: Jamie Curnow <jc@jc21.com>
+license: BSD
+projectURL: https://github.com/jc21/nginx-proxy-manager

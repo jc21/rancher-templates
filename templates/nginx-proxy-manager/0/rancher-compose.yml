@@ -1,0 +1,28 @@
+version: '2'
+catalog:
+  name: nginx-proxy-manager
+  version: 1.0.1
+  description: Nginx Proxy Manager
+  questions:
+    - variable: http_port
+      label: Public HTTP Port
+      description: The Outside Web Port
+      default: 80
+      required: true
+      type: int
+    - variable: https_port
+      label: Public HTTPS Port
+      description: The Outside HTTPS Port
+      default: 443
+      required: true
+      type: int
+    - variable: admin_port
+      label: Admin HTTP Port
+      description: The Admin Web Port
+      default: 81
+      required: true
+      type: int
+services:
+  web:
+    scale: 1
+    start_on_create: true

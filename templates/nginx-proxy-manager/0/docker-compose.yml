@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    image: jc21/nginx-proxy-manager:1.0.1
+    ports:
+      - ${http_port}:80
+      - ${https_port}:443
+      - ${admin_port}:81
+    volumes:
+      - /config
+      - /etc/letsencrypt
+    labels:
+      io.rancher.container.hostname_override: container_name

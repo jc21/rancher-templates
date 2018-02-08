@@ -1,7 +1,7 @@
 name: EthOS Config Manager
 description: |
   UI for managing EthOS Configurations
-version: 1.0.00
+version: 1.0.0
 category: cryptocurrency
 maintainer: Jamie Curnow <jc@jc21.com>
 license: BSD
