@@ -1,0 +1,28 @@
+version: '2'
+services:
+  electroneum:
+    image: jc21/electroneumd:latest
+    volumes_from:
+      - electroneum-data
+    ports:
+      - ${P2P_BIND_PORT}:${P2P_BIND_PORT}
+      - ${RPC_BIND_PORT}:${RPC_BIND_PORT}
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL}
+      - P2P_BIND_PORT=${P2P_BIND_PORT}
+      - RPC_BIND_PORT=${RPC_BIND_PORT}
+      - RPC_BIND_IP=0.0.0.0
+      - DAEMON_EXTRA_ARGS=--confirm-external-bind ${DAEMON_EXTRA_ARGS}
+    labels:
+      io.rancher.sidekicks: electroneum-data
+      io.rancher.container.hostname_override: container_name
+
+  electroneum-data:
+    image: jc21/electroneumd:latest
+    entrypoint:
+      - /bin/true
+    volumes:
+      - /root/.electroneum
+    labels:
+      io.rancher.container.start_once: 'true'
+      io.rancher.container.hostname_override: container_name

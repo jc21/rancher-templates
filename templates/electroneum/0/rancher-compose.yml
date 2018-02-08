@@ -1,0 +1,32 @@
+version: '2'
+catalog:
+  name: Electroneum
+  version: 0.0.1
+  description: Electroneum Node
+  minimum_rancher_version: 1.0.1
+  maximum_rancher_version: 1.99.99
+  questions:
+    - variable: P2P_BIND_PORT
+      label: P2P Port
+      description: The Port to be used for P2P connections
+      default: 26967
+      required: true
+      type: int
+    - variable: P2P_BIND_PORT
+      label: RPC Port
+      description: The Port to be used for RPC connections
+      default: 26968
+      required: true
+      type: int
+    - variable: LOG_LEVEL
+      label: Log Level
+      description: The daemon log level
+      default: 0
+      required: true
+      type: int
+    - variable: DAEMON_EXTRA_ARGS
+      label: Daemon Arguments
+      description: Extra Arguments for Daemon. See project page for info.
+      default:
+      required: false
+      type: string
