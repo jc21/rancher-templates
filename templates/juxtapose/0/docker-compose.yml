@@ -1,0 +1,28 @@
+version: '2'
+services:
+  web:
+    image: jc21/juxtapose:1.0.2
+    ports:
+      - ${http_port}:80
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - /srv/app/config/default.json
+    depends_on:
+      - db
+    links:
+      - db
+    labels:
+      io.rancher.container.hostname_override: container_name
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: "juxtapose"
+      MYSQL_DATABASE: "juxtapose"
+      MYSQL_USER: "juxtapose"
+      MYSQL_PASSWORD: "juxtapose"
+    volumes:
+      - /var/lib/mysql
+    labels:
+      io.rancher.container.start_once: 'true'
+      io.rancher.container.hostname_override: container_name

@@ -1,0 +1,19 @@
+version: '2'
+catalog:
+  name: juxtapose
+  version: 1.0.2
+  description: Get notified of events that you want to know about without being swamped in noise
+  questions:
+    - variable: http_port
+      label: HTTP Port
+      description: Port to access on
+      default: 80
+      required: true
+      type: int
+services:
+  web:
+    scale: 1
+    start_on_create: false
+  db:
+    scale: 1
+    start_on_create: true
