@@ -5,8 +5,8 @@ services:
     volumes_from:
       - electroneum-data
     ports:
-      - ${P2P_BIND_PORT}:${P2P_BIND_PORT}
-      - ${RPC_BIND_PORT}:${RPC_BIND_PORT}
+      - "${P2P_BIND_PORT}:${P2P_BIND_PORT}"
+      - "${RPC_BIND_PORT}:${RPC_BIND_PORT}"
     environment:
       - LOG_LEVEL=${LOG_LEVEL}
       - P2P_BIND_PORT=${P2P_BIND_PORT}
