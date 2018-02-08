@@ -1,0 +1,10 @@
+version: '2'
+services:
+  ecm:
+    image: jc21/ethos-config-manager:1.0.0
+    ports:
+      - ${http_port}:80
+    volumes:
+      - /config
+    labels:
+      io.rancher.container.hostname_override: container_name

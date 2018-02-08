@@ -1,0 +1,16 @@
+version: '2'
+catalog:
+  name: ecm
+  version: 1.0.0
+  description: EthOS Config Manager
+  questions:
+    - variable: http_port
+      label: HTTP Port
+      description: The Port connect to
+      default: 80
+      required: true
+      type: int
+services:
+  ecm:
+    scale: 1
+    start_on_create: true
