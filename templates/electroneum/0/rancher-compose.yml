@@ -1,10 +1,8 @@
 version: '2'
 catalog:
-  name: Electroneum
+  name: electroneum
   version: 0.0.1
   description: Electroneum Node
-  minimum_rancher_version: 1.0.1
-  maximum_rancher_version: 1.99.99
   questions:
     - variable: P2P_BIND_PORT
       label: P2P Port
@@ -30,3 +28,10 @@ catalog:
       default:
       required: false
       type: string
+services:
+  electroneum:
+    scale: 1
+    start_on_create: true
+  electroneum-data:
+    scale: 1
+    start_on_create: true
