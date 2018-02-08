@@ -7,7 +7,7 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - /srv/app/config/default.json
+      - /srv/app/config/production.json
     depends_on:
       - db
     links:
