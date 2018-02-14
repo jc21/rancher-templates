@@ -1,0 +1,8 @@
+name: Bitcoin
+description: |
+  Bitcoin Node
+version: 1.0.0
+category: cryptocurrency
+maintainer: kylemanna
+license: BSD
+projectURL: https://github.com/kylemanna/docker-bitcoind

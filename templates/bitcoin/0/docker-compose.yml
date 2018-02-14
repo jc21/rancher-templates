@@ -1,0 +1,11 @@
+version: '2'
+services:
+  bitcoin-node:
+    image: kylemanna/bitcoind:latest
+    ports:
+      - ${p2p_bind_port}:${p2p_bind_port}
+      - ${rpc_bind_port}:${rpc_bind_port}
+    volumes:
+      - /bitcoin
+    labels:
+      io.rancher.container.hostname_override: container_name

@@ -1,0 +1,22 @@
+version: '2'
+catalog:
+  name: bitcoin
+  version: 1.0.0
+  description: Bitcoin Node
+  questions:
+    - variable: p2p_bind_port
+      label: P2P Port
+      description: The Port to be used for P2P connections
+      default: 8333
+      required: true
+      type: int
+    - variable: rpc_bind_port
+      label: RPC Port
+      description: The Port to be used for RPC connections
+      default: 8332
+      required: true
+      type: int
+services:
+  bitcoin-node:
+    scale: 1
+    start_on_create: true
