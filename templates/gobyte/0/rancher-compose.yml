@@ -1,0 +1,28 @@
+version: '2'
+catalog:
+  name: gobyte
+  version: 0.0.1
+  description: GoByte Core Node
+  questions:
+    - variable: p2p_bind_port
+      label: P2P Port
+      description: The Port to be used for P2P connections
+      default: 12455
+      required: true
+      type: int
+    - variable: rpc_bind_port
+      label: RPC Port
+      description: The Port to be used for RPC connections
+      default: 12454
+      required: true
+      type: int
+    - variable: daemon_extra_args
+      label: Daemon Arguments
+      description: Extra Arguments for Daemon. See project page for info.
+      default: -dns
+      required: false
+      type: string
+services:
+  gobyte-node:
+    scale: 1
+    start_on_create: true

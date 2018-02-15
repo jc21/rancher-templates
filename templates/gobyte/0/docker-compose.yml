@@ -1,0 +1,13 @@
+version: '2'
+services:
+  gobyte-node:
+    image: jc21/gobyted:latest
+    ports:
+      - ${p2p_bind_port}:${p2p_bind_port}
+      - ${rpc_bind_port}:${rpc_bind_port}
+    environment:
+      - DAEMON_EXTRA_ARGS=-server -printtoconsole ${daemon_extra_args}
+    volumes:
+      - /root/.gobytecore
+    labels:
+      io.rancher.container.hostname_override: container_name

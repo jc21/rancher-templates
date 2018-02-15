@@ -1,0 +1,8 @@
+name: GoByte
+description: |
+  GoByte Core Node
+version: 0.0.1
+category: cryptocurrency
+maintainer: Jamie Curnow <jc@jc21.com>
+license: BSD
+projectURL: https://github.com/jc21/docker-gobyted

@@ -14,7 +14,7 @@ Visit the [Rancher Site](http://rancher.com) if you're wondering what's going on
 - [Ethereum](https://github.com/ethereum/go-ethereum)
 - [Bitcoin](https://github.com/kylemanna/docker-bitcoind)
 - [Linda Coin](https://github.com/jc21/docker-lindacoind)
-
+- [GoByte Coin](https://github.com/jc21/docker-gobyted)
 
 ## How to add this Catalog
 
