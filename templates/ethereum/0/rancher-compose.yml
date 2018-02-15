@@ -29,6 +29,6 @@ catalog:
       required: false
       type: string
 services:
-  bitcoin-node:
+  ethereum-node:
     scale: 1
     start_on_create: true
