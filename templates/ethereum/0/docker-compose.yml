@@ -1,0 +1,13 @@
+version: '2'
+services:
+  ethereum-node:
+    image: ethereum/client-go
+    ports:
+      - ${p2p_bind_port}:${p2p_bind_port}
+      - ${rpc_bind_port}:${rpc_bind_port}
+      - ${rpc_ws_port}:${rpc_ws_port}
+    volumes:
+      - /root
+    command: --rpc --rpcaddr 0.0.0.0 --ws --wsaddr 0.0.0.0 ${geth_extra_args}
+    labels:
+      io.rancher.container.hostname_override: container_name

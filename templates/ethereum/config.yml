@@ -1,0 +1,8 @@
+name: Ethereum
+description: |
+  Ethereum Node
+version: 1.0.0
+category: cryptocurrency
+maintainer: ethereum
+license: BSD
+projectURL: https://geth.ethereum.org

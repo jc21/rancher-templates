@@ -1,0 +1,34 @@
+version: '2'
+catalog:
+  name: ethereum
+  version: 1.0.0
+  description: Ethereum Node
+  questions:
+    - variable: p2p_bind_port
+      label: P2P Port
+      description: The Port to be used for P2P connections
+      default: 30303
+      required: true
+      type: int
+    - variable: rpc_bind_port
+      label: RPC Port
+      description: The Port to be used for RPC connections
+      default: 8545
+      required: true
+      type: int
+    - variable: rpc_ws_port
+      label: RPC Websocket Port
+      description: The Port to be used for RPC websocket connections
+      default: 8546
+      required: true
+      type: int
+    - variable: geth_extra_args
+      label: Geth Arguments
+      description: Extra Arguments for Daemon. See project page for info.
+      default:
+      required: false
+      type: string
+services:
+  bitcoin-node:
+    scale: 1
+    start_on_create: true
