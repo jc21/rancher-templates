@@ -13,6 +13,7 @@ Visit the [Rancher Site](http://rancher.com) if you're wondering what's going on
 - [Juxtapose](https://github.com/jc21/juxtapose)
 - [Ethereum](https://github.com/ethereum/go-ethereum)
 - [Bitcoin](https://github.com/kylemanna/docker-bitcoind)
+- [Linda Coin](https://github.com/jc21/docker-lindacoind)
 
 
 ## How to add this Catalog

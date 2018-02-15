@@ -1,0 +1,13 @@
+version: '2'
+services:
+  lindacoin-node:
+    image: jc21/lindacoind:latest
+    ports:
+      - ${p2p_bind_port}:${p2p_bind_port}
+      - ${rpc_bind_port}:${rpc_bind_port}
+    environment:
+      - DAEMON_EXTRA_ARGS=-bind 0.0.0.0 ${daemon_extra_args}
+    volumes:
+      - /root/.Linda
+    labels:
+      io.rancher.container.hostname_override: container_name
