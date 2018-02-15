@@ -11,6 +11,8 @@ Visit the [Rancher Site](http://rancher.com) if you're wondering what's going on
 - [Intense Coin](https://github.com/jc21/docker-intensecoind)
 - [EthOS Config Manager](https://github.com/jc21/ethos-config-manager)
 - [Juxtapose](https://github.com/jc21/juxtapose)
+- [Ethereum](https://github.com/ethereum/go-ethereum)
+- [Bitcoin](https://github.com/kylemanna/docker-bitcoind)
 
 
 ## How to add this Catalog
