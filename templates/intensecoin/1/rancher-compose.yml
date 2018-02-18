@@ -1,7 +1,7 @@
 version: '2'
 catalog:
   name: intensecoin
-  version: 1.4.2
+  version: beta
   description: Intense Coin Node
   questions:
     - variable: p2p_bind_port
