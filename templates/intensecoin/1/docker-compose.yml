@@ -9,7 +9,7 @@ services:
       - P2P_BIND_PORT=${p2p_bind_port}
       - RPC_BIND_PORT=${rpc_bind_port}
       - RPC_BIND_IP=0.0.0.0
-      - DAEMON_EXTRA_ARGS=${daemon_extra_args}
+      - DAEMON_EXTRA_ARGS=--confirm-external-bind ${daemon_extra_args}
     volumes:
       - /root/.intensecoin
     labels:
