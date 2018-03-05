@@ -2,7 +2,7 @@ version: '2'
 catalog:
   name: electroneum
   version: master
-  description: Electroneum Node from Master branch
+  description: Electroneum Node from v0.11.0.0-revert branch
   questions:
     - variable: p2p_bind_port
       label: P2P Port
