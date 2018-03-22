@@ -1,0 +1,12 @@
+version: '2'
+services:
+  kibana-app:
+    restart: always
+    tty: true
+    image: docker.elastic.co/kibana/kibana:6.2.3
+    ports:
+      - ${public_port}:5601
+    environment:
+      ELASTICSEARCH_URL: ${es_url}
+    labels:
+      io.rancher.container.hostname_override: container_name

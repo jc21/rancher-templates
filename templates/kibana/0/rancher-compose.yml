@@ -1,0 +1,28 @@
+version: '2'
+catalog:
+  name: kibana
+  version: 6.2.3-rancher1
+  description: Kibana: Explore & Visualize Your Data
+  questions:
+    - variable: elasticsearch_source
+      label: Elasticsearch source
+      description: Link to elasticsearch service or stack/service
+      default: es/elasticsearch-clients
+      required: true
+      type: service
+    - variable: public_port
+      label: Public Port
+      description: Unique public port for Kibana
+      default: 80
+      required: true
+      type: int
+    - variable: es_url
+      label: Elasticsearch URL
+      description: Location of ES Server endpoint
+      default: http://elasticsearch:9200
+      required: true
+      type: string
+services:
+  kibana-app:
+    scale: 1
+    start_on_create: true
