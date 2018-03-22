@@ -1,4 +1,7 @@
-name: "Kibana"
-description: "Visualization dashboard"
-version: "6.2.3-rancher1"
+name: Kibana 6
+description: |
+  Visualization dashboard
+version: 6.2.3-rancher1
 category: ELK
+maintainer: Jamie Curnow <jc@jc21.com>
+projectURL: https://www.elastic.co/products/kibana

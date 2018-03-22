@@ -1,6 +1,6 @@
 version: '2'
 catalog:
-  name: kibana
+  name: Kibana 6
   version: 6.2.3-rancher1
   description: Kibana: Explore & Visualize Your Data
   questions:
