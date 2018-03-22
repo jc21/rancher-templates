@@ -1,7 +1,7 @@
 name: Elasticsearch Cluster 6
 description: |
   Elasticsearch, you know for search!
-version: 6.2.3
+version: 6.2.3-rancher1
 category: ELK
 maintainer: Jamie Curnow <jc@jc21.com>
 projectURL: https://www.elastic.co/products/elasticsearch

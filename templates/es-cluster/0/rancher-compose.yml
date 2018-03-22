@@ -100,9 +100,12 @@ catalog:
             - rancher-ebs
 
 services:
+
   es-master:
     scale: ${minimum_master_nodes}
+
   es-data:
     scale: ${initial_data_nodes}
+
   es-client:
     scale: ${initial_client_nodes}
