@@ -4,5 +4,4 @@ description: |
 version: 6.2.3
 category: ELK
 maintainer: Jamie Curnow <jc@jc21.com>
-license: BSD
 projectURL: https://www.elastic.co/products/elasticsearch
