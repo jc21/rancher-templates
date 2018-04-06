@@ -2,8 +2,6 @@
 
 Rancher is a stack manager and here are my templates for deploying my projects.
 
-Visit the [Rancher Site](http://rancher.com) if you're wondering what's going on.
-
 
 ## Templates in this Catalog
 
@@ -15,6 +13,7 @@ Visit the [Rancher Site](http://rancher.com) if you're wondering what's going on
 - [Bitcoin](https://github.com/kylemanna/docker-bitcoind)
 - [Linda Coin](https://github.com/jc21/docker-lindacoind)
 - [GoByte Coin](https://github.com/jc21/docker-gobyted)
+- [Docker Registry UI](https://github.com/jc21/docker-registry-ui)
 
 ## How to add this Catalog
 

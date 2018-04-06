@@ -1,0 +1,40 @@
+version: '2'
+catalog:
+  name: registry-ui
+  version: 1.0.0
+  description: A nice web interface for managing your Docker Registry images
+  questions:
+    - variable: http_port
+      label: HTTP Port
+      description: Port to access on
+      default: 80
+      required: true
+      type: int
+    - variable: secret
+      label: Registry Secret
+      description: Something random and hard to guess
+      default: o43g2kjgn2iuhv2k4jn2f23f290qfghsdg
+      required: true
+      type: string
+    - variable: registry_domain
+      label: Public registry domain:port
+      description: What is the domain/port that should be used for pushes/pulls? Optional
+      default: myserver.com
+      required: false
+      type: string
+    - variable: deletion
+      label: Enable image deletion
+      description: Advanced feature, specify "true" at your own risk
+      default:
+      required: false
+      type: string
+services:
+  registry:
+    scale: 1
+    start_on_create: true
+  ui:
+    scale: 1
+    start_on_create: true
+  proxy:
+    scale: 1
+    start_on_create: true

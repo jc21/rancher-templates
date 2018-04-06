@@ -1,0 +1,35 @@
+version: '2'
+services:
+  registry:
+    image: registry:2
+    environment:
+      - REGISTRY_HTTP_SECRET=${secret}
+      - REGISTRY_STORAGE_DELETE_ENABLED=${deletion}
+    volumes:
+      - /var/lib/registry
+    labels:
+      io.rancher.container.hostname_override: container_name
+  ui:
+    image: jc21/registry-ui:1.0.0
+    environment:
+      - NODE_ENV=production
+      - REGISTRY_HOST=registry:5000
+      - REGISTRY_SSL=
+      - REGISTRY_DOMAIN=${registry_domain}
+      - REGISTRY_STORAGE_DELETE_ENABLED=${deletion}
+    links:
+      - registry
+    labels:
+      io.rancher.container.hostname_override: container_name
+  proxy:
+    image: jc21/registry-ui-proxy
+    ports:
+      - ${http_port}:80
+    depends_on:
+      - ui
+      - registry
+    links:
+      - ui
+      - registry
+    labels:
+      io.rancher.container.hostname_override: container_name
