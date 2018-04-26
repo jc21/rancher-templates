@@ -1,7 +1,7 @@
 version: '2'
 services:
   intensecoin:
-    image: jc21/intensecoind:beta
+    image: jc21/intensecoind:2.0.0
     ports:
       - ${p2p_bind_port}:${p2p_bind_port}
       - ${rpc_bind_port}:${rpc_bind_port}
