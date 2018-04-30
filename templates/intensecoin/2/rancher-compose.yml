@@ -1,0 +1,28 @@
+version: '2'
+catalog:
+  name: intensecoin
+  version: 2.0.1
+  description: Intense Coin Node
+  questions:
+    - variable: p2p_bind_port
+      label: P2P Port
+      description: The Port to be used for P2P connections
+      default: 48772
+      required: true
+      type: int
+    - variable: rpc_bind_port
+      label: RPC Port
+      description: The Port to be used for RPC connections
+      default: 48782
+      required: true
+      type: int
+    - variable: daemon_extra_args
+      label: Daemon Arguments
+      description: Extra Arguments for Daemon. See project page for info.
+      default:
+      required: false
+      type: string
+services:
+  intensecoin:
+    scale: 1
+    start_on_create: true
